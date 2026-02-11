@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Réservation billet</title>
+  <link rel="stylesheet" href="Billet.css" />
+</head>
+<body>
+
+  <h1 id="titre">Bienvenu sur notre Site</h1>
+
+  <!-- Image dans le même dossier que Billet.html -->
+  <img src="avion.jpg" alt="Avion" class="photo" />
+
+  <form id="formBillet">
+    <fieldset id="cadre">
+      <legend>Réservation billet</legend>
+
+      <p>
+        Nom * :
+        <input type="text" id="nom" placeholder="Entrez votre nom SVP" required>
+
+        Prenom * :
+        <input type="text" id="prenom" placeholder="Entrez votre prenom SVP" required>
+
+        E-mail * :
+        <!-- Email Gmail فقط -->
+        <input type="email" id="email" placeholder="contact@gmail.com"
+               pattern=".+@gmail\.com" required>
+      </p>
+
+      <p>
+        <span class="A1">Pays de départ</span> :
+        <select id="depart">
+          <option value="Tunisie">Tunisie</option>
+          <option value="Maroc">Maroc</option>
+        </select>
+
+        <span class="A1">Pays de destination</span> :
+        <select id="destination">
+          <option value="France">France</option>
+          <option value="Italie">Italie</option>
+        </select>
+      </p>
+
+      <p>
+        <span class="A1">Date de départ</span> :
+        <input type="date" id="dateDepart">
+      </p>
+
+      <p>
+        <span class="A2">Adulte</span> :
+        <input type="number" id="adulte" min="0" max="100" value="0">
+
+        <span class="A2">Enfants(-12ans)</span> :
+        <input type="number" id="enfants" min="0" max="100" value="0">
+
+        <span class="A2">Bébés(-2ans)</span> :
+        <input type="number" id="bebes" min="0" max="100" value="0">
+      </p>
+
+      <p>
+        <input type="button" id="btnCalc" value="Calculer">
+        <input type="text" id="prix" value="" readonly>
+        <span id="prixDT">DT</span>
+      </p>
+
+      <hr>
+
+      <!-- Message d’erreur (TP5: affiché sous <hr/>) -->
+      <p id="msg"></p>
+
+      <p>
+        <input type="submit" value="Envoyer">
+        <input type="reset" value="Annuler">
+      </p>
+
+    </fieldset>
+  </form>
+
+  <!-- TP5 demande aussi JS, mais tu as demandé HTML/CSS فقط -->
+  <!-- <script src="Billet.js"></script> -->
+
+</body>
+</html>

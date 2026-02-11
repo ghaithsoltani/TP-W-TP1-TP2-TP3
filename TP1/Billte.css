@@ -1,0 +1,54 @@
+/* Corps de la page */
+body {
+    background-color: #999;
+    font-family: Arial, sans-serif;
+}
+
+/* Titre principal */
+#titre {
+    font-size: 36px;
+    font-weight: bold;
+    font-family: "Lucida Sans Unicode";
+    color: #F00;
+    text-align: center;
+}
+
+/* Image */
+img {
+    display: block;
+    margin: auto;
+}
+
+/* Formulaire */
+fieldset {
+    width: 40%;
+    margin: auto;
+    background-color: #CCC;
+    border: 2px solid #990099;
+    padding: 15px;
+}
+
+/* Légende */
+legend {
+    color: #0FF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Classe A1 */
+.A1 {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Classe A2 */
+.A2 {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Prix */
+#prix {
+    font-weight: bold;
+    color: #F00;
+}

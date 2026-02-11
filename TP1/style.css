@@ -1,0 +1,46 @@
+h1{
+    text-align: center;
+}
+table{
+    margin:auto;
+    width: 450px;
+    border-radius: 15px solid black;
+    border-collapse: separate;
+    border-spacing: 4px;
+
+
+}
+
+
+form {
+    margin-top: 40px;
+}
+
+fieldset {
+    width: 420px;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid black;
+    background-color: white;
+}
+
+legend h2 {
+    margin: 0;
+    text-align: center;
+}
+
+p {
+    margin: 10px 0;
+}
+
+input[type="text"],
+input[type="email"],
+select {
+    width: 200px;
+    padding: 4px;
+}
+
+input[type="submit"] {
+    padding: 6px 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Contact </legend>
+            <h1>Contact</h1>
+             <table>
+                <tr>
+                    <td>Votre prenom</td>
+                    <td><input type="text" name="firstname"></td>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td><input type="text" name="lastname"></td>
+                </tr>
+                 <tr>
+                    <td>
+                        <input type="radio" name="civilite" value="M" checked>Civilte
+                        <input type="radio" name="civilite" value="Mme">Madame
+                        <input type="radio" name="civilite" value="Mlle">Monsieur
+                    </td>
+                </tr>
+                 <tr>
+                    <td>Email</td>
+                    <td><input type="email" name="email"></td>
+
+                </tr>
+
+                <tr>
+                    <td>Abonnement</td>
+                    <td><input type="checkbox" name="abonnement" value="newsletter">Newsletter</td>
+
+                </tr>
+                <tr>
+                    <td>Preference </td>
+                    <td>
+                        <select name="preference" id="preference">
+                            <option value="">Contactez-moi par email</option>
+                            <option value="tech" >Technologie</option>
+                            <option value="sports">Sports</option>
+                            <option value="music">Musique</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Envoyer">
+                        
+                    </td>
+                </tr>
+             </table>
+        </fieldset>
+    
+
+    </form>
+</body>
+</html>

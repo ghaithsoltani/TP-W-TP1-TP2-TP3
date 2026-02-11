@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Réservation billet</title>
+    <link rel="stylesheet" href="Billet.css">
+</head>
+<body>
+
+<h1 id="titre">Bienvenu sur notre site</h1>
+
+<img src="avion.jpg" alt="Avion" width="100%">
+
+<form>
+    <fieldset>
+        <legend>Réservation billet</legend>
+
+        <p>
+            Nom * :
+            <input type="text" placeholder="Entrez votre nom SVP" required>
+
+            Prénom * :
+            <input type="text" placeholder="Entrez votre prenom SVP" required>
+
+            E-mail * :
+            <input type="email" pattern=".+@gmail\.com" placeholder="contact@gmail.com" required>
+        </p>
+
+        <p>
+            <span class="A1">Pays de départ</span> :
+            <select>
+                <option>Tunis</option>
+                <option>Maghreb</option>
+                <option>Maroc</option>
+            </select>
+
+            <span class="A1">Pays de destination</span> :
+            <select>
+                <option>France</option>
+                <option>Europe</option>
+                <option>Italie</option>
+            </select>
+        </p>
+
+        <p>
+            <span class="A1">Date de départ</span> :
+            <input type="date">
+        </p>
+
+        <p>
+            <span class="A2">Adulte</span> :
+            <input type="number" max="100">
+
+            <span class="A2">Enfants (-12ans)</span> :
+            <input type="number" max="100">
+
+            <span class="A2">Bébés (-2ans)</span> :
+            <input type="number" max="100">
+        </p>
+
+        <p>
+            Calculer :
+            <input type="text">
+            <span id="prix">DT</span>
+        </p>
+
+        <p>
+            <input type="submit" value="Envoyer">
+            <input type="reset" value="Annuler">
+        </p>
+    </fieldset>
+</form>
+
+</body>
+</html>

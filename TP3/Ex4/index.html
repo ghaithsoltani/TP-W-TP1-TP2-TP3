@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="priceDisplay"></h1>
+    <button onclick="confirmerAchat()">Confirmer l'achat</button>
+
+    <script>    
+        
+        let HT = parseFloat(prompt("Entrez le prix HT :"));
+        let Taux_TVA = parseFloat(prompt("Entrez le taux de TVA (en %) :"));
+        
+        
+        let Taux_TVA_Calcul = (Taux_TVA / 100) + 1;
+        let TTC = HT * Taux_TVA_Calcul;
+        
+        
+        let priceElement = document.getElementById("priceDisplay");
+        priceElement.innerText = "Prix TTC : " + TTC.toFixed(2) + " DT";
+        
+        if (TTC > 100) {
+            priceElement.style.color = "red";
+        } else {
+            priceElement.style.color = "green";
+        }
+        
+        function confirmerAchat() {
+            if (confirm("Confirmez-vous votre achat du montant " + TTC.toFixed(2) + " DT ?")) {
+                document.write("L'utilisateur peut confirmer l'achat. Montant : " + TTC.toFixed(2) + " DT");
+            }
+        }
+    </script>
+</body>
+</html>

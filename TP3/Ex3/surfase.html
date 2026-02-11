@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let base = parseFloat(prompt("Entrez la base du triangle :"));
+        let hauteur = parseFloat(prompt("Entrez la hauteur du triangle :"));    
+
+        function surfaceRectangle(base, hauteur) {
+            return (base * hauteur) / 2;
+        }
+        alert("La surface du triangle est de : " + surfaceRectangle(base, hauteur));
+    </script>
+</body>
+</html>
