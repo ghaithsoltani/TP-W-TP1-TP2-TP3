@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Classe Student</title>
+</head>
+<body>
+
+<p id="studentName"></p>
+
+<script>
+class Student {
+
+    #motdepasse; // vraie propriété privée
+
+    constructor(nom, prenom, age, motdepasse) {
+        alert("Nouvelle instance Student créée !");
+        this._age = age; // privée par convention
+        this.nom = nom;      // via setter
+        this.prenom = prenom; // via setter
+        this.#motdepasse = motdepasse;
+    }
+
+    // Getters
+    get nom() {
+        return this._nom;
+    }
+
+    get prenom() {
+        return this._prenom;
+    }
+
+    get age() {
+        return this._age;
+    }
+
+    get motdepasse() {
+        return "********";
+    }
+
+    // Setters
+    set nom(value) {
+        if (value.length > 0) {
+            this._nom = value;
+        }
+    }
+
+    set prenom(value) {
+        if (value.length > 0) {
+            this._prenom = value;
+        }
+    }
+
+    set motdepasse(value) {
+        if (value.length >= 4) {
+            this.#motdepasse = value;
+        } else {
+            alert("Mot de passe trop court !");
+        }
+    }
+
+    sayWelcom() {
+        alert("Welcome to ISIKef");
+    }
+}
+
+// Création des instances
+const student1 = new Student("Foulan1", "BenFoulan1", 20, "abcd");
+const student2 = new Student("Foulan2", "BenFoulan2", 21, "efgh");
+
+// Affichage console
+console.log(student1);
+console.log(student2);
+
+// Insertion dans la page web
+document.getElementById("studentName").innerHTML =
+    student1.nom + " " + student1.prenom;
+</script>
+
+</body>
+</html>

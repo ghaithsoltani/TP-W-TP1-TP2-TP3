@@ -4,58 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercice 2 - Boucles</title>
-    <style>
-        body{font-family:Segoe UI,Arial;max-width:760px;margin:24px}
-        section{margin-bottom:18px}
-        h1,h2{margin:6px 0}
-        .output{background:#f7f7f7;padding:8px;border-radius:4px}
-    </style>
+    
 </head>
-<body>
-    <h1>Exercice 2 — Boucles</h1>
-
-    <section>
-        <h2>1. Avec la boucle <em>for</em> : afficher les nombres de 1 à 10</h2>
-        <div id="for1" class="output" aria-live="polite"></div>
-    </section>
-
-    <section>
-        <h2>1. Avec la boucle <em>for</em> : afficher les nombres pairs de 1 à 10</h2>
-        <div id="forEven" class="output" aria-live="polite"></div>
-    </section>
-
-    <section>
-        <h2>2. Avec la boucle <em>while</em> : afficher les nombres impairs de 1 à 10 (ordre décroissant)</h2>
-        <div id="whileOdd" class="output" aria-live="polite"></div>
-    </section>
-
+<body> 
     <script>
-        // 1) For : nombres de 1 à 10
-        const elFor1 = document.getElementById('for1');
-        const nums1 = [];
-        for (let i = 1; i <= 10; i++) {
-            nums1.push(i);
+        let i = 9;
+        while (i >= 1) {
+            document.write(i + "<br>"  );
+            i -= 2;
         }
-        elFor1.textContent = nums1.join(' ');
-
-        // 1) For : nombres pairs de 1 à 10
-        const elForEven = document.getElementById('forEven');
-        const evens = [];
-        for (let i = 1; i <= 10; i++) {
-            if (i % 2 === 0) evens.push(i);
-        }
-        elForEven.textContent = evens.join(' ');
-
-        // 2) While : nombres impairs de 1 à 10, en commençant par 10 et en décrémentant de 2
-        // Interprétation : on parcourt les impairs entre 1 et 10 en ordre décroissant -> 9,7,5,3,1
-        const elWhileOdd = document.getElementById('whileOdd');
-        const odds = [];
-        let n = 9; // plus grand impair <= 10
-        while (n >= 1) {
-            odds.push(n);
-            n -= 2;
-        }
-        elWhileOdd.textContent = odds.join(' ');
     </script>
 </body>
 </html>

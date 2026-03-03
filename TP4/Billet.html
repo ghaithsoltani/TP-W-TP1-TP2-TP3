@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Réservation billet</title>
   <link rel="stylesheet" href="Billet.css" />
+  <script src="Billet.js"></script> 
 </head>
 <body>
 
@@ -12,21 +13,21 @@
   <!-- Image dans le même dossier que Billet.html -->
   <img src="avion.jpg" alt="Avion" class="photo" />
 
-  <form id="formBillet">
+  <form>
     <fieldset id="cadre">
       <legend>Réservation billet</legend>
 
       <p>
         Nom * :
-        <input type="text" id="nom" placeholder="Entrez votre nom SVP" required>
+        <input type="text" id="nom" placeholder="Entrez votre nom SVP" >
 
         Prenom * :
-        <input type="text" id="prenom" placeholder="Entrez votre prenom SVP" required>
+        <input type="text" id="prenom" placeholder="Entrez votre prenom SVP" >
 
         E-mail * :
         <!-- Email Gmail فقط -->
-        <input type="email" id="email" placeholder="contact@gmail.com"
-               pattern=".+@gmail\.com" required>
+        <input type="email" id="email" placeholder="contact@gmail.com">
+               
       </p>
 
       <p>
@@ -61,7 +62,7 @@
 
       <p>
         <input type="button" id="btnCalc" value="Calculer">
-        <input type="text" id="prix" value="" readonly>
+        <input type="text" id="prix" value="" >
         <span id="prixDT">DT</span>
       </p>
 
@@ -71,7 +72,7 @@
       <p id="msg"></p>
 
       <p>
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Envoyer" onclick="return verifierCalcul()">
         <input type="reset" value="Annuler">
       </p>
 
@@ -79,7 +80,7 @@
   </form>
 
   <!-- TP5 demande aussi JS, mais tu as demandé HTML/CSS فقط -->
-  <!-- <script src="Billet.js"></script> -->
+ 
 
 </body>
 </html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Classe Chien</title>
+</head>
+<body>
+
+<p id="chien2"></p>
+
+<script>
+class Chien {
+    constructor(nom, age, race) {
+        this.nom = nom;
+        this.age = age;
+        this.race = race;
+    }
+
+    toString() {
+        return `Nom: ${this.nom}, Age: ${this.age}, Race: ${this.race}`;
+    }
+}
+
+// Création des instances
+const chien1 = new Chien("Rex", 3, "Berger Allemand");
+const chien2 = new Chien("Bella", 2, "Caniche");
+
+// Affichage du premier dans la console
+console.log(chien1.toString());
+
+// Affichage du second dans la page web
+document.getElementById("chien2").innerHTML = chien2.toString();
+</script>
+
+</body>
+</html>
